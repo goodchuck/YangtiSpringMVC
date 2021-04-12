@@ -8,6 +8,9 @@
     <bean id="/index" class="com.newlecture.web.controller.IndexController">  <!-- mvc에선 id를 url을 넣음 -->
         <!-- collaborators and configuration for this bean go here -->
     </bean>
-
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
 
 </beans>
