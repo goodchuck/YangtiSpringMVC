@@ -8,11 +8,8 @@
         http://www.springframework.org/schema/mvc
         https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <bean id="/index" class="com.newlecture.web.controller.IndexController">  <!-- mvc에선 id를 url을 넣음 -->
-    
-        <!-- collaborators and configuration for this bean go here -->
+    <bean id="/index" class="com.newlecture.web.controller.IndexController">  <!-- mvc에선 id를 url을 넣음 -->    
     </bean>
-    
     <bean id="/notice/list" class="com.newlecture.web.controller.notice.ListController"> </bean>
     <bean id="/notice/detail" class="com.newlecture.web.controller.notice.DetailController"></bean>
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
