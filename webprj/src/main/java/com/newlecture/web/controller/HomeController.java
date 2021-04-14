@@ -10,10 +10,16 @@ import org.springframework.web.servlet.ModelAndView;
 //import org.springframework.web.servlet.mvc.Controller;
 
 @Controller
-public class IndexController{
+public class HomeController{
 
 	@RequestMapping("/index")
-	public void aaaa() {
+	public String index() {
+		
+		return "root.index"; //타일즈에서 리절빙이 가능해짐
+	}
+	
+	@RequestMapping("/help")
+	public void help() {
 		System.out.println("asdfasdfsadf");
 	}
 	
