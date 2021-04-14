@@ -14,8 +14,8 @@ import com.newlecture.web.entity.Notice;
 
 public class NoticeService {
 	private String url = "jdbc:oracle:thin:@localhost:1521/xepdb1";
-	private String uid = "NEWLEC";
-	private String pwd = "11111";
+	private String uid = "c##goodchuck";
+	private String pwd = "1234";
 	private String driver = "oracle.jdbc.driver.OracleDriver";
 	
 	public List<Notice> getList(int page, String field, String query) throws ClassNotFoundException, SQLException{
