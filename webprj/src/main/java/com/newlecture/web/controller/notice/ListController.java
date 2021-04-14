@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 
@@ -13,18 +14,14 @@ import com.newlecture.web.service.NoticeService;
 import com.newlecture.web.service.jdbc.JDBCNoticeService;
 
 public class ListController implements Controller{
-
+											//여기 위에다 autowired
 	private NoticeService noticeService;
 	
-	
-	
-	
+	@Autowired
 	public void setNoticeService(NoticeService noticeService) {
 		this.noticeService = noticeService;
+		System.out.println("Hello"); //이런거 할려면 autowired를 여기에 안할꺼면
 	}
-
-
-
 
 	@Override
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
