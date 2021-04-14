@@ -14,10 +14,10 @@ import com.newlecture.web.service.NoticeService;
 import com.newlecture.web.service.jdbc.JDBCNoticeService;
 
 public class ListController implements Controller{
-											//여기 위에다 autowired
+	@Autowired										//여기 위에다 autowired
 	private NoticeService noticeService;
 	
-	@Autowired
+
 	public void setNoticeService(NoticeService noticeService) {
 		this.noticeService = noticeService;
 		System.out.println("Hello"); //이런거 할려면 autowired를 여기에 안할꺼면

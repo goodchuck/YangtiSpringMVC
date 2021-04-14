@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 //import org.springframework.web.servlet.mvc.Controller;
 
 @Controller
+@RequestMapping("/")
 public class HomeController{
 
 	@RequestMapping("/index")
@@ -18,10 +19,6 @@ public class HomeController{
 		return "root.index"; //타일즈에서 리절빙이 가능해짐
 	}
 	
-	@RequestMapping("/help")
-	public void help() {
-		System.out.println("asdfasdfsadf");
-	}
 	
 //	@Override
 //	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
