@@ -13,10 +13,13 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.newlecture.web.entity.Notice;
 import com.newlecture.web.service.NoticeService;
 
+@Service // @Controller, @Service, @Repository, @Component
 public class JDBCNoticeService implements NoticeService{
 //	private String url = "jdbc:oracle:thin:@localhost:1521/xepdb1";
 //	private String uid = "c##goodchuck";
