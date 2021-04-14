@@ -12,10 +12,11 @@
         https://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<context:annotation-config />
+	<context:component-scan base-package="com.newlecture.web.controller"></context:component-scan>
 	
-	<bean id="/index"
-		class="com.newlecture.web.controller.IndexController">  <!-- mvc에선 id를 url을 넣음 -->
-	</bean>
+<!-- 	<bean id="/index"
+		class="com.newlecture.web.controller.IndexController">  mvc에선 id를 url을 넣음
+	</bean> -->
 	<bean id="/notice/list" class="com.newlecture.web.controller.notice.ListController">
 		<!-- <property name="noticeService" ref="noticeService" /> -->
 	</bean>
@@ -41,5 +42,7 @@
 	</bean>
 
 	<mvc:resources location="/static/" mapping="/**"></mvc:resources>
+	<mvc:annotation-driven /> <!-- 맵핑할땐 이게 필요 -->
+	
 	
 </beans>
