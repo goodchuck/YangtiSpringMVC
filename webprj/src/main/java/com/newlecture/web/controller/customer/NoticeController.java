@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.newlecture.web.entity.Notice;
 import com.newlecture.web.service.NoticeService;
@@ -21,9 +22,9 @@ public class NoticeController {
 	private NoticeService noticeService;
 	
 	@RequestMapping("list")
-	public String list(HttpServletRequest request) throws ClassNotFoundException, SQLException { 
-		String p = request.getParameter("p"); // String list() ()안에 String p를 넣어도 똑같이 활용이가능 여기 줄은 주석처리하고
-		System.out.println(p);
+	public String list(@RequestParam(name = "p", defaultValue="1") String page) throws ClassNotFoundException, SQLException {  //String page 말고 int page도 가능하다
+		//String p = request.getParameter("p"); // String list() ()안에 String p를 넣어도 똑같이 활용이가능 여기 줄은 주석처리하고
+		System.out.println("page: " + page);
 		
 		//List<Notice> list = noticeService.getList(1, "TITLE", "");
 		return "notice.list";
