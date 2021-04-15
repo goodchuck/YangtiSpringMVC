@@ -24,6 +24,8 @@ public class NoticeController {
 	@RequestMapping("list")
 	public String list(@RequestParam(name = "p", defaultValue="1") String page) throws ClassNotFoundException, SQLException {  //String page 말고 int page도 가능하다
 		//String p = request.getParameter("p"); // String list() ()안에 String p를 넣어도 똑같이 활용이가능 여기 줄은 주석처리하고
+		//@RequestParam(value 와 name은 같은거임 별칭일뿐)
+		
 		System.out.println("page: " + page);
 		
 		//List<Notice> list = noticeService.getList(1, "TITLE", "");
